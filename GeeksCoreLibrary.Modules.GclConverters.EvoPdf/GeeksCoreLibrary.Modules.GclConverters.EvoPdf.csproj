@@ -15,7 +15,7 @@
     <!-- Developers have to add these packages via NuGet in their own projects. -->
     <ItemGroup>
         <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.2" PrivateAssets="all" />
-        <PackageReference Include="EvoPdf.Chromium.Linux" Version="11.4.2" PrivateAssets="all" />
+        <PackageReference Include="EvoPdf.Chromium.Linux" Version="11.4.1" PrivateAssets="all" />
     </ItemGroup>
 
     <!-- Normal package references. -->
