@@ -10,7 +10,7 @@ If you do want to use Evo PDF, you need to add a reference to `EvoPdf.Chromium.W
 ```xml
 <!-- Default PackageReference when no RuntimeIdentifier is specified -->
 <ItemGroup Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOsPlatform('Windows'))">
-    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.2" />
+    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.5" />
 </ItemGroup>
 
 <ItemGroup Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOsPlatform('Linux'))">
