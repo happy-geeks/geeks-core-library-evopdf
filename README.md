@@ -19,7 +19,7 @@ If you do want to use Evo PDF, you need to add a reference to `EvoPdf.Chromium.W
 
 <!-- Windows-specific dependency -->
 <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.2" />
+    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.5" />
 </ItemGroup>
 
 <!-- Linux-specific dependency -->
