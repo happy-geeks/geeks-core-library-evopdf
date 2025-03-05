@@ -5,9 +5,9 @@
         <Nullable>enable</Nullable>
         <Authors>Happy Horizon B.V.</Authors>
         <Description>Evo PDF plugin for converting HTML to PDF in the GeeksCoreLibrary.</Description>
-        <AssemblyVersion>5.1.2502.2</AssemblyVersion>
-        <FileVersion>5.1.2502.2</FileVersion>
-        <Version>5.1.2502.2</Version>
+        <AssemblyVersion>5.2.2503.1</AssemblyVersion>
+        <FileVersion>5.2.2503.1</FileVersion>
+        <Version>5.2.2503.1</Version>
         <LangVersion>default</LangVersion>
     </PropertyGroup>
 
