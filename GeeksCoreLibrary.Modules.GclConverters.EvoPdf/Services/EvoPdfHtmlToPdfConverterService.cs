@@ -223,7 +223,7 @@ public class EvoPdfHtmlToPdfConverterService : HtmlToPdfConverterService
              p.SetValue(converter.PdfDocumentOptions, Convert.ChangeType(options[p.Name], p.PropertyType), null);
          }
 
-         var baseUri = httpContext == null ? "/" : HttpContextHelpers.GetBaseUri(httpContext).ToString();
+         var baseUri = httpContext == null ? null : HttpContextHelpers.GetBaseUri(httpContext).ToString();
          var output = converter.ConvertHtml(htmlToConvert.ToString(), baseUri);
          var fileResult = new FileContentResult(output, "application/pdf")
          {
