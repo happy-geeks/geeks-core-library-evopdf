@@ -13,9 +13,9 @@
         <RepositoryType>git</RepositoryType>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <AssemblyVersion>5.3.2504.2</AssemblyVersion>
-        <FileVersion>5.3.2504.2</FileVersion>
-        <Version>5.3.2504.2</Version>
+        <AssemblyVersion>5.3.2504.3</AssemblyVersion>
+        <FileVersion>5.3.2504.3</FileVersion>
+        <Version>5.3.2504.3</Version>
         <LangVersion>default</LangVersion>
         <EnablePackageValidation>true</EnablePackageValidation>
         <IsPackable>true</IsPackable>
@@ -32,7 +32,7 @@
 
     <!-- Normal package references. -->
     <ItemGroup>
-        <PackageReference Include="GeeksCoreLibrary" Version="5.3.2504.2" />
+        <PackageReference Include="GeeksCoreLibrary" Version="5.3.2504.3" />
     </ItemGroup>
 
     <!-- Copy the LICENSE and README.md files to the package -->
