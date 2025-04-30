@@ -224,6 +224,8 @@ public class EvoPdfHtmlToPdfConverterService : HtmlToPdfConverterService
          }
 
          var baseUri = httpContext == null ? null : HttpContextHelpers.GetBaseUri(httpContext).ToString();
+         baseUri = await objectsService.FindSystemObjectByDomainNameAsync("pdf_baseurl_override", baseUri);
+         
          var output = converter.ConvertHtml(htmlToConvert.ToString(), baseUri);
          var fileResult = new FileContentResult(output, "application/pdf")
          {
