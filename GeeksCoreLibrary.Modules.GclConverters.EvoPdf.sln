@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeeksCoreLibrary.Modules.GclConverters.EvoPdf", "GeeksCoreLibrary.Modules.GclConverters.EvoPdf\GeeksCoreLibrary.Modules.GclConverters.EvoPdf.csproj", "{DD09BC93-A00F-4123-8188-C67953F8D4DB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A680705A-5E8B-4170-A2A3-41C162406A3C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{68904C14-74AB-4373-8E53-D482732D729E}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-		LICENSE = LICENSE
-		.gitignore = .gitignore
+		.github\CODEOWNERS = .github\CODEOWNERS
+		.github\dependabot.yml = .github\dependabot.yml
+		.github\pull_request_template.md = .github\pull_request_template.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{184554C7-7BD2-470D-B743-F3684EBDA905}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\automatic-release.yml = .github\workflows\automatic-release.yml
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\workflows\publish-to-nuget.yml = .github\workflows\publish-to-nuget.yml
 	EndProjectSection
 EndProject
 Global
@@ -24,5 +31,8 @@ Global
 		{E56BD8D5-F393-4AC9-B89E-CB8918861C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56BD8D5-F393-4AC9-B89E-CB8918861C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E56BD8D5-F393-4AC9-B89E-CB8918861C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{184554C7-7BD2-470D-B743-F3684EBDA905} = {68904C14-74AB-4373-8E53-D482732D729E}
 	EndGlobalSection
 EndGlobal
