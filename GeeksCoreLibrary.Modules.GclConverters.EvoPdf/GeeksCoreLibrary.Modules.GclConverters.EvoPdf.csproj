@@ -31,6 +31,9 @@
     </ItemGroup>
 
     <!-- Normal package references. -->
+    <ItemGroup>
+        <PackageReference Include="GeeksCoreLibrary" Version="5.3.2505.1" />
+    </ItemGroup>
 
     <!-- Copy the LICENSE and README.md files to the package -->
     <ItemGroup>
@@ -42,13 +45,5 @@
             <Pack>True</Pack>
             <PackagePath>.\</PackagePath>
         </None>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\..\GeeksCoreLibrary\GeeksCoreLibrary\GeeksCoreLibrary.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
-        <HintPath>..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\9.0.4\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-      </Reference>
     </ItemGroup>
 </Project>
