@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
@@ -27,7 +27,7 @@
         <!-- During NuGet restore the highest version will be used acros both packages, this would be 11.4.5 that is not available for Linux causing runtime issues. -->
         <!-- By using a range for the Windows version, version 11.4.1 will be used when building for Linux. -->
         <PackageReference Include="EvoPdf.Chromium.Windows" Version="[11.4.1,11.4.5]" PrivateAssets="all" />
-        <PackageReference Include="EvoPdf.Chromium.Linux" Version="11.4.1" PrivateAssets="all" />
+        <PackageReference Include="EvoPdf.Chromium.Linux" Version="12.0.0" PrivateAssets="all" />
     </ItemGroup>
 
     <!-- Normal package references. -->
