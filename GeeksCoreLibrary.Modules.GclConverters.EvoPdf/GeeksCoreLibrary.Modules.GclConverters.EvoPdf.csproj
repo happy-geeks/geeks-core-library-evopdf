@@ -32,7 +32,7 @@
 
     <!-- Normal package references. -->
     <ItemGroup>
-        <PackageReference Include="GeeksCoreLibrary" Version="5.3.2506.4" />
+        <PackageReference Include="GeeksCoreLibrary" Version="5.3.2506.5" />
     </ItemGroup>
 
     <!-- Copy the LICENSE and README.md files to the package -->
