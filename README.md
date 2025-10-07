@@ -5,9 +5,6 @@
 - **Language(s)**: C#
 - **Framework(s)**: .NET 9.0
 - **Database**: None (uses parent GCL database connection)
-- **Status**: Production / Active Maintenance
-- **Critical Level**: High (PDF generation is critical for document workflows)
-- **Last Updated**: October 2025 (Version 5.3.2508.1)
 - **Repository**: https://github.com/happy-geeks/geeks-core-library-evopdf
 - **License**: GNU GPL v3
 - **NuGet Package**: GeeksCoreLibrary.Modules.GclConverters.EvoPdf
