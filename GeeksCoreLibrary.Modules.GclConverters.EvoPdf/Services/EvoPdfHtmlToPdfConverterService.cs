@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
-using EvoPdf.Chromium;
+using EvoPdf.Next;
 using GeeksCoreLibrary.Core.Helpers;
 using GeeksCoreLibrary.Core.Models;
 using GeeksCoreLibrary.Modules.Databases.Interfaces;
@@ -13,12 +13,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using EvoPdfLicensing = EvoPdf.Next.Licensing;
 
 namespace GeeksCoreLibrary.Modules.GclConverters.EvoPdf.Services;
 
 public class EvoPdfHtmlToPdfConverterService : HtmlToPdfConverterService
 {
-    private readonly GclSettings gclSettings;
     private readonly IObjectsService objectsService;
     private readonly IStringReplacementsService stringReplacementsService;
     private readonly IHttpContextAccessor? httpContextAccessor;
@@ -34,12 +34,13 @@ public class EvoPdfHtmlToPdfConverterService : HtmlToPdfConverterService
         this.objectsService = objectsService;
         this.stringReplacementsService = stringReplacementsService;
         this.httpContextAccessor = httpContextAccessor;
-        this.gclSettings = gclSettings.Value;
+
+        EvoPdfLicensing.LicenseKey = gclSettings.Value.EvoPdfLicenseKey;
 
         // Check if EvoPdf is loaded, otherwise throw an exception.
         // We load Evo PDF with PrivateAssets = true, so it won't be automatically loaded in projects that use the GCL.
         // This is because Evo PDF has separate packages for Windows and Linux, and we can't properly detect which one they need from here.
-        var evoPdfType = Type.GetType("EvoPdf.Chromium.HtmlToPdfConverter, EvoPdf.Chromium");
+        var evoPdfType = Type.GetType("EvoPdf.Next.HtmlToPdfConverter, EvoPdf.Next");
         if (evoPdfType == null)
         {
             throw new InvalidOperationException("EvoPdf is not loaded. Please ensure you have added the correct NuGet package: Either 'EvoPdf.Chromium.Windows' for Windows or 'EvoPdf.Chromium.Linux' for Linux.");
@@ -53,7 +54,6 @@ public class EvoPdfHtmlToPdfConverterService : HtmlToPdfConverterService
          var httpContext = httpContextAccessor?.HttpContext;
          var converter = new HtmlToPdfConverter
          {
-             LicenseKey = gclSettings.EvoPdfLicenseKey,
              ConversionDelay = 2
          };
 
