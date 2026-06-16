@@ -10,21 +10,21 @@ If you do want to use Evo PDF, you need to add a reference to `EvoPdf.Chromium.W
 ```xml
 <!-- Default PackageReference when no RuntimeIdentifier is specified -->
 <ItemGroup Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOsPlatform('Windows'))">
-    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.5" />
+    <PackageReference Include="EvoPdf.Next.Windows" Version="14.6.2" />
 </ItemGroup>
 
 <ItemGroup Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOsPlatform('Linux'))">
-    <PackageReference Include="EvoPdf.Chromium.Linux" Version="11.4.1" />
+    <PackageReference Include="EvoPdf.Next.Linux" Version="14.6.2" />
 </ItemGroup>
 
 <!-- Windows-specific dependency -->
 <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-    <PackageReference Include="EvoPdf.Chromium.Windows" Version="11.4.5" />
+    <PackageReference Include="EvoPdf.Next.Windows" Version="14.6.2" />
 </ItemGroup>
 
 <!-- Linux-specific dependency -->
 <ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-    <PackageReference Include="EvoPdf.Chromium.Linux" Version="11.4.1" />
+    <PackageReference Include="EvoPdf.Next.Linux" Version="14.6.2" />
 </ItemGroup>
 ```
 
